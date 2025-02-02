@@ -50,7 +50,12 @@ export default tseslint.config(
 					tsx: 'never',
 				},
 			],
-			'prettier/prettier': 'error',
+			'prettier/prettier': [
+				'error',
+				{
+					endOfLine: 'auto',
+				},
+			],
 		},
 		settings: {
 			'import/resolver': {
