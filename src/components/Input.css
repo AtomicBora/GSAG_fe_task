@@ -1,0 +1,40 @@
+:root {
+    --label-font-size: 16px;
+    --input-margin-top: calc(16px * 1.6)
+}
+
+.input-container {
+    position: relative;
+    margin-top: var(--input-margin-top)
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+input:focus~label,
+input.filled~label {
+    top: 0;
+    transform: translateY(-100%);
+    font-size: var(--label-font-size);
+    color: #007bff;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
